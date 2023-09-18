@@ -35,12 +35,8 @@
   .mems-slider {
     display: grid;
   }
-
-  .slider{
-    position: relative;
-  }
   
-  .slider-image {
+  .slider-image{
     grid-area: 1/1/1/1;
     width: 100%;
     height: 100%;
@@ -48,22 +44,23 @@
     object-fit: contain;
     border-radius: 0.5rem;
     opacity: 0;
-    z-index: 1;
+    border-radius: 10px;
   }
   
   .mems-content {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     padding-top: 1rem;
+    justify-content: flex-start;
   }
   
   .content-list {
     display: grid;
-    width: 100%;
+    width: 46%;
     list-style: none;
     overflow: hidden;
     text-align: center;
+    margin-right: 17%;
+    margin-left: 8%;
   }
   
   .list-item {
@@ -76,7 +73,7 @@
   
   .content-controls {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
   }
   
   .controls-item {
@@ -189,24 +186,27 @@
     background: blueviolet;
     }
 
-    .mems-content {
-      flex-direction: column-reverse;
-    }
-  
     .content-controls {
+      order: 1;
       justify-content: center;
+    }
+
+    .mems-content{
+      display: flex;
+      flex-direction: column;
     }
   
     .content-list {
-      padding-top: 1rem;
-      order: 1;
       align-items: center;
       text-align: center;
+      order:2;
+      margin:0;
+      width: 100%;
+      justify-content: flex-start;
     }
 
     .petrosian{
         max-width: 6.25rem;
-        z-index: 2;
       }
 
       .list-item {
